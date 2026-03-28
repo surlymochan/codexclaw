@@ -12,7 +12,7 @@ import type {
   QuotedMessageContext,
 } from "../types/channel.js";
 import {
-  buildInteractiveMarkdownCard,
+  buildPostMessageContent,
   extractMessageText,
 } from "./feishu-message-content.js";
 import { parseFeishuMessageEvent, type FeishuMessageEvent } from "./feishu-message-parser.js";
@@ -94,7 +94,7 @@ export class FeishuClient {
       data: {
         receive_id: chatId,
         msg_type: "interactive",
-        content: buildInteractiveMarkdownCard(markdown),
+        content: buildPostMessageContent(markdown),
       },
     });
 

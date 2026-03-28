@@ -4,7 +4,7 @@ import { MemoryStore } from "./core/memory.js";
 import { CodexAppServerRunner } from "./codex/app-server-runner.js";
 import { GuidanceLoader } from "./core/guidance-loader.js";
 import { shouldDeliverHeartbeatReply } from "./core/heartbeat.js";
-import { buildTurnPrompt, shouldRenderAsMarkdown } from "./core/markdown.js";
+import { buildTurnPrompt, normalizeMarkdownText, shouldRenderAsMarkdown } from "./core/markdown.js";
 import { parseReplyPayload } from "./core/reply-parser.js";
 import { parseScheduledOutput, shouldDeliverScheduledOutput } from "./core/scheduled-output.js";
 import { Scheduler } from "./core/scheduler.js";
@@ -481,10 +481,11 @@ export class CodexChannelApp {
     const payload = parseReplyPayload(reply);
 
     for (const text of payload.textParts) {
-      if (shouldRenderAsMarkdown(text)) {
-        await this.feishuClient.sendMarkdown(conversationId, text);
+      const normalized = normalizeMarkdownText(text);
+      if (shouldRenderAsMarkdown(normalized)) {
+        await this.feishuClient.sendMarkdown(conversationId, normalized);
       } else {
-        await this.feishuClient.sendText(conversationId, text);
+        await this.feishuClient.sendText(conversationId, normalized);
       }
     }
 

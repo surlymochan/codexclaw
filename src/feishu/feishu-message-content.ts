@@ -54,6 +54,33 @@ function collectPostImageKeys(post: any): string[] {
   return keys;
 }
 
+function splitMarkdownTitle(markdown: string): { title: string; body: string } {
+  const lines = markdown
+    .split(/\r?\n/)
+    .map((line) => line.trimEnd());
+
+  const firstContentLineIndex = lines.findIndex((line) => line.trim().length > 0);
+  if (firstContentLineIndex === -1) {
+    return { title: "消息", body: "" };
+  }
+
+  const firstLine = lines[firstContentLineIndex]!.trim();
+  const headingMatch = firstLine.match(/^#{1,6}\s+(.+)$/);
+  if (headingMatch?.[1]) {
+    const title = headingMatch[1].trim() || "消息";
+    const body = lines
+      .slice(firstContentLineIndex + 1)
+      .join("\n")
+      .trim();
+    return { title, body };
+  }
+
+  return {
+    title: "消息",
+    body: markdown.trim(),
+  };
+}
+
 export function extractMessageText(msgType: string | undefined, rawContent: string | undefined): string {
   const content = rawContent?.trim() ?? "";
   if (!content) {
@@ -85,18 +112,31 @@ export function extractMessageText(msgType: string | undefined, rawContent: stri
   return content;
 }
 
-export function buildInteractiveMarkdownCard(markdown: string): string {
+export function buildPostMessageContent(markdown: string): string {
+  const { title, body } = splitMarkdownTitle(markdown);
+  const content = body.trim() || title;
+
   return JSON.stringify({
+    schema: "2.0",
     config: {
       wide_screen_mode: true,
       enable_forward: true,
     },
-    elements: [
-      {
-        tag: "markdown",
-        content: markdown,
+    header: {
+      template: "blue",
+      title: {
+        content: title,
+        tag: "plain_text",
       },
-    ],
+    },
+    body: {
+      elements: [
+        {
+          tag: "markdown" as const,
+          content,
+        },
+      ],
+    },
   });
 }
 

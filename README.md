@@ -7,7 +7,8 @@ CodexClaw 是一个面向飞书的本地 Codex 助手网关。
 ## 项目特点
 
 - 每个飞书会话对应一个 Codex thread
-- 默认纯文本，必要时使用 Markdown
+- 默认纯文本，Markdown 会自动走飞书 JSON 2.0 模板卡
+- Markdown 卡片会把首个 `#` 提成卡片标题，正文原样进入 `markdown` 组件
 - session、去重、记忆、story 和定时任务都保存在本地
 - 从仓库根目录的本地文件加载 guidance
 - 支持 heartbeat 和 cron 后台任务
@@ -62,6 +63,15 @@ npm run service:uninstall
 运行时会读取仓库根目录下的本地文件。这些文件已加入 gitignore。
 通用模板在 [docs/templates](docs/templates)，本地引导说明在
 [docs/local-guidance.md](docs/local-guidance.md)。
+
+## Markdown 模板卡
+
+助手回复中的 Markdown 默认使用飞书 JSON 2.0 卡片渲染：
+
+- `#` 会被提取为卡片标题
+- `body.elements` 里使用官方 `markdown` 组件
+- 常见 Markdown 语法直接保留给飞书渲染
+- 这条路径用于所有 Markdown 回复，不区分简报、日志或说明
 
 ## 文档
 

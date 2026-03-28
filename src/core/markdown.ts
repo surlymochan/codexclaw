@@ -49,5 +49,11 @@ export function shouldRenderAsMarkdown(text: string): boolean {
     /\[[^\]]+\]\([^)]+\)/,
     /^\s*>\s/m,
     /\*\*[^*]+\*\*/,
+    /(^|[^*])\*[^*\n]+\*([^*]|$)/,
+    /(^|[^_])_[^_\n]+_([^_]|$)/,
   ].some((pattern) => pattern.test(value));
+}
+
+export function normalizeMarkdownText(text: string): string {
+  return text.replace(/\\([\\`*_{}\[\]()#+\-.!|>])/g, "$1");
 }
