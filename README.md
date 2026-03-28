@@ -1,13 +1,15 @@
 # CodexClaw
 
-面向飞书的 WebSocket 网关，用来连接并持久化本地 `codex` CLI 会话。
+CodexClaw 是一个面向飞书的本地 Codex 助手网关。
 
-## 概览
+它把飞书会话连接到本地 `codex` CLI 线程，并把对话、记忆和后台任务都保存在本地。
+
+## 项目特点
 
 - 每个飞书会话对应一个 Codex thread
 - 默认纯文本，必要时使用 Markdown
-- 本地状态保存 session、去重、记忆、story 和定时任务
-- 从你在仓库根目录创建的本地文件加载 guidance
+- session、去重、记忆、story 和定时任务都保存在本地
+- 从仓库根目录的本地文件加载 guidance
 - 支持 heartbeat 和 cron 后台任务
 
 ## 环境要求
