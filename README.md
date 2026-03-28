@@ -29,6 +29,12 @@ npm run dev
 
 完整启动流程见 [docs/quickstart.md](docs/quickstart.md)。
 
+如果你想用一条命令把本地准备和常驻服务一起装好，可以直接运行：
+
+```bash
+npx -y codexclaw bootstrap --service
+```
+
 ## 常驻运行
 
 常驻运行可使用 macOS `launchd`：

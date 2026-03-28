@@ -8,3 +8,10 @@
 
 `npm run init:local-guidance` 只会创建缺失的本地文件。详细说明见
 [docs/local-guidance.md](docs/local-guidance.md)。
+
+如果你想把“安装依赖 + 生成本地 guidance + 安装常驻服务”合成一条命令，
+可以使用：
+
+```bash
+npx -y codexclaw bootstrap --service
+```

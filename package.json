@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "type": "module",
   "description": "Feishu WebSocket channel gateway for local Codex CLI sessions",
+  "bin": {
+    "codexclaw": "./dist/src/cli.js"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "bootstrap": "tsx src/cli.ts bootstrap",
     "dev": "tsx watch src/index.ts",
     "init:local-guidance": "tsx scripts/init-local-guidance.ts",
+    "prepack": "npm run build",
     "service:install": "bash scripts/launchd/install.sh",
     "service:restart": "bash scripts/launchd/restart.sh",
     "service:uninstall": "bash scripts/launchd/uninstall.sh",
@@ -16,6 +21,18 @@
     "typecheck": "tsc --noEmit"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "docs/templates",
+    "README.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "package.json"
+  ],
   "engines": {
     "node": ">=22.0.0"
   },
