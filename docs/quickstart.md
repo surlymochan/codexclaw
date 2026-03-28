@@ -13,5 +13,5 @@
 可以使用：
 
 ```bash
-npx -y codexclaw bootstrap --service
+npx -y @surlymochan/codexclaw bootstrap --service
 ```

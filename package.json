@@ -1,5 +1,5 @@
 {
-  "name": "codexclaw",
+  "name": "@surlymochan/codexclaw",
   "version": "0.1.0",
   "type": "module",
   "description": "Feishu WebSocket channel gateway for local Codex CLI sessions",

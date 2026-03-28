@@ -32,7 +32,7 @@ npm run dev
 如果你想用一条命令把本地准备和常驻服务一起装好，可以直接运行：
 
 ```bash
-npx -y codexclaw bootstrap --service
+npx -y @surlymochan/codexclaw bootstrap --service
 ```
 
 ## 常驻运行
