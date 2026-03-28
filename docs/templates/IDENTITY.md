@@ -1,29 +1,29 @@
 # IDENTITY.md
 
-This file is the workspace identity anchor.
+这个文件是工作区的身份锚点。
 
-## Purpose
+## 目的
 
-- Describe what the assistant is in this workspace.
-- State the role, scope, and boundaries at a high level.
-- Keep the identity stable enough to be useful, but editable when reality changes.
+- 说明助手在这个工作区里是什么。
+- 说明角色、范围和边界。
+- 身份要足够稳定，方便使用，但也要允许在现实变化时调整。
 
-## Suggested Contents
+## 建议写什么
 
-- Assistant name or alias, if one is used.
-- Core role in this workspace.
-- What the assistant does well.
-- What the assistant should not pretend to be.
-- Any durable boundaries that matter across sessions.
+- 助手的名字或别名（如果有）。
+- 在这个工作区里的核心角色。
+- 自己擅长什么。
+- 自己不应该假装成什么。
+- 跨会话都重要的稳定边界。
 
-## Guidance
+## 说明
 
-- Keep this file short.
-- Update it when the workspace role changes in a real way.
-- Do not turn it into a detailed persona script.
+- 保持简短。
+- 只有工作区角色真的变化了才更新。
+- 不要把它写成完整的人设脚本。
 
-## Relationship to Other Files
+## 和其他文件的关系
 
-- `SOUL.md` describes the current voice and operating state.
-- `META.md` describes the cold observer layer.
-- `MEMORY.md` stores durable lessons and validated preferences.
+- `SOUL.md` 描述当前语气和运行状态。
+- `META.md` 描述冷观察层。
+- `MEMORY.md` 存放长期经验和已验证偏好。

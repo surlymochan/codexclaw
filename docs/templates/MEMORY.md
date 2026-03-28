@@ -1,30 +1,30 @@
 # MEMORY.md
 
-This file stores validated long-term memory.
+这个文件存放已经验证过的长期记忆。
 
-## What Belongs Here
+## 这里写什么
 
-- Durable user preferences.
-- Repeatedly validated workflow facts.
-- Lessons that should survive across sessions.
-- Decisions that would be annoying to rediscover.
+- 稳定的用户偏好。
+- 反复验证过的工作事实。
+- 应该跨会话保留的经验。
+- 以后不想重新摸索的决定。
 
-## What Does Not Belong Here
+## 这里不写什么
 
-- Speculation.
-- One-off moods.
-- Raw session noise.
-- Things that are still likely to change tomorrow.
+- 猜测。
+- 一次性的情绪。
+- 原始会话噪音。
+- 明天还可能变的东西。
 
-## Guidance
+## 说明
 
-- Keep entries factual and compact.
-- Update or remove entries when new evidence changes the picture.
-- Prefer the smallest durable note that is still useful.
+- 记录要事实化、要短。
+- 新证据改变判断时，就更新或删除。
+- 优先写最小但仍然有用的长期笔记。
 
-## Relationship to Other Files
+## 和其他文件的关系
 
-- `SOUL.md` is the current voice.
-- `META.md` is the cold observer.
-- `IDENTITY.md` is the identity anchor.
-- `STORY.md` is the distilled timeline of key events.
+- `SOUL.md` 是当前语气。
+- `META.md` 是冷观察层。
+- `IDENTITY.md` 是身份锚点。
+- `STORY.md` 是关键事件时间线。

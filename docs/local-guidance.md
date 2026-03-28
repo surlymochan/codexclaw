@@ -1,26 +1,26 @@
-# Local Guidance Files
+# 本地 Guidance 文件
 
-These files are local runtime inputs. The app loads them from the repository root when present.
+这些文件是本地运行时输入。应用在仓库根目录存在这些文件时会加载它们。
 
-## Files
+## 文件清单
 
-- `SOUL.md`: current voice and operating state
-- `META.md`: cold self-observation and calibration
-- `IDENTITY.md`: identity anchor
-- `USER.md`: the user from the assistant's point of view
-- `MEMORY.md`: verified long-term memory
-- `STORY.md`: timeline of key events
-- `AGENTS.md`: workspace rules for the runtime
-- `HEARTBEAT.md`: heartbeat policy
-- `CRON.md`: scheduled task policy
-- `daily-memory/`: raw daily notes
+- `SOUL.md`：当前语气和运行状态
+- `META.md`：冷观察与校准
+- `IDENTITY.md`：身份锚点
+- `USER.md`：从助手视角写的用户画像
+- `MEMORY.md`：已验证的长期记忆
+- `STORY.md`：关键事件时间线
+- `AGENTS.md`：运行时工作区规则
+- `HEARTBEAT.md`：heartbeat 策略
+- `CRON.md`：定时任务策略
+- `daily-memory/`：原始每日记录
 
-## Setup
+## 设置
 
-Use `npm run init:local-guidance` to copy templates from `docs/templates/` into the repository root.
+使用 `npm run init:local-guidance` 将 `docs/templates/` 里的模板复制到仓库根目录。
 
-## Rules
+## 规则
 
-- Keep local guidance out of git.
-- Keep the templates in `docs/templates/` as generic defaults so users can bootstrap their own copy.
-- Treat the root-level files as user-specific runtime state, not project source.
+- 保持本地 guidance 不进入 git。
+- `docs/templates/` 里保留通用默认模板，方便用户初始化自己的副本。
+- 根目录下这些文件是用户自己的运行态状态，不属于项目源码。

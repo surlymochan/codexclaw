@@ -1,7 +1,7 @@
 # CRON.md
 
-# One block per scheduled task.
-# Replace the values below with your own schedule, conversation, and prompt.
+# 每个定时任务写一个块。
+# 把下面的值替换成你自己的 schedule、conversation 和 prompt。
 #
 # - name: task-name
 #   schedule: "0 22 * * *"

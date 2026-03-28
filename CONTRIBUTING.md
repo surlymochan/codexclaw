@@ -1,25 +1,25 @@
-# Contributing
+# 贡献指南
 
-## Before You Start
+## 开始前
 
-- Run `npm install`
-- Run `npm run init:local-guidance`
-- Fill in your local `.env`
+- 运行 `npm install`
+- 运行 `npm run init:local-guidance`
+- 填写本地 `.env`
 
-## Development
+## 开发
 
 - `npm run dev`
 - `npm test`
 - `npm run build`
 
-## Rules
+## 规则
 
-- Do not commit root-level guidance files.
-- Keep secrets out of the repository.
-- Update docs when behavior changes.
-- Prefer small, reviewable changes.
+- 不要提交根目录的引导文件。
+- 不要把密钥提交到仓库里。
+- 行为变化时同步更新文档。
+- 尽量保持改动小且便于审阅。
 
-## Local Guidance
+## 本地 Guidance
 
-If you need the assistant runtime files, create them from the templates in
-`docs/templates/` with `npm run init:local-guidance`.
+如果需要助手运行时文件，可以通过 `npm run init:local-guidance`
+把 `docs/templates/` 里的模板复制出来。

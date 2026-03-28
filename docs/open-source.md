@@ -1,26 +1,25 @@
-# Open Source Notes
+# 开源说明
 
-CodexClaw is MIT licensed. The repository contains code, docs, and templates, but
-your personal runtime files are meant to live outside git.
+CodexClaw 使用 MIT 协议。仓库包含代码、文档和模板，但你的个人运行
+文件应该保留在 git 之外。
 
-## What Stays in Git
+## 保留在 Git 中的内容
 
-- application code
-- tests
-- documentation
-- generic templates in `docs/templates/`
+- 应用代码
+- 测试
+- 文档
+- `docs/templates/` 中的通用模板
 
-## What Stays Local
+## 保留在本地的内容
 
-- root-level guidance files created from templates
+- 由模板生成的根目录引导文件
 - `daily-memory/`
 - `HEARTBEAT.md`
 - `CRON.md`
 - `.env`
 - `.data/`
 
-## Why
+## 原因
 
-The repository should be safe to publish without leaking private memory or
-workspace-specific state. Users bootstrap their own local guidance with
-`npm run init:local-guidance`.
+仓库需要能够安全公开，不能泄露私有记忆或工作区状态。用户通过
+`npm run init:local-guidance` 自行初始化本地 guidance。

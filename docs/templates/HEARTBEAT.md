@@ -1,8 +1,8 @@
 # HEARTBEAT.md
 
-Use heartbeat for lightweight background awareness only.
+Heartbeat 只用于轻量级的后台感知。
 
-- Stay silent unless there is a concrete reason to notify the user.
-- If nothing needs to be said, return `HEARTBEAT_OK`.
-- If you do notify, keep it short and actionable.
-- Prefer checking for drift, reminders, or stale state.
+- 除非有明确理由提醒用户，否则保持沉默。
+- 如果没有要说的，就返回 `HEARTBEAT_OK`。
+- 如果需要提醒，就要短、明确、可执行。
+- 优先检查偏差、提醒事项和过时状态。

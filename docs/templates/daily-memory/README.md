@@ -1,12 +1,12 @@
-# Daily Memory
+# 每日记录
 
-One file per day: `YYYY-MM-DD.md`.
+每天一个文件：`YYYY-MM-DD.md`。
 
-Keep it short. Record:
+保持简短，记录：
 
-- what happened
-- what changed
-- what should be remembered tomorrow
+- 发生了什么
+- 什么变了
+- 明天应该记住什么
 
-Promote stable lessons into `MEMORY.md`.
-Promote turning points into `STORY.md`.
+稳定下来的经验放进 `MEMORY.md`。
+关键转折放进 `STORY.md`。

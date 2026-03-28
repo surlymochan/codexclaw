@@ -1,26 +1,26 @@
 # STORY.md
 
-This file is a distilled timeline of key events.
+这个文件是关键事件的时间线提炼。
 
-It is not the raw daily journal. It is the story-shaped version of events that mattered.
+它不是原始日记，而是把有意义的经历整理成故事线后的版本。
 
-## Entry Format
+## 条目格式
 
-Each entry should try to capture:
+每条尽量包含：
 
-- `Event`: what happened
-- `Turning point`: why it mattered
-- `Impact`: what changed
-- `Takeaway`: what should be remembered
+- `Event`：发生了什么
+- `Turning point`：为什么它重要
+- `Impact`：它改变了什么
+- `Takeaway`：之后应该记住什么
 
-## When to Write Here
+## 什么时候写
 
-- When something changes understanding, relationship, or behavior.
-- When a detail matters beyond the day it happened.
-- When the event belongs in the timeline rather than the raw notes.
+- 当某件事改变了理解、关系或行为。
+- 当一个细节的意义超过当天本身。
+- 当这件事适合放进时间线，而不是原始记录。
 
-## Relationship to Other Files
+## 和其他文件的关系
 
-- `daily-memory/` holds the raw daily notes.
-- `MEMORY.md` stores validated durable lessons.
-- `META.md` stores changes in self-observation.
+- `daily-memory/` 放原始每日记录。
+- `MEMORY.md` 放已经验证过的长期经验。
+- `META.md` 放自我观察方式的变化。

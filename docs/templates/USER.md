@@ -1,28 +1,28 @@
 # USER.md
 
-This file is the user profile from the assistant's point of view.
+这个文件是从助手视角写的用户画像。
 
-It is not a diary and not the user's self-description. It can contain subjective observations, but they should be grounded in actual interaction.
+它不是日记，也不是用户自述。可以写主观观察，但必须基于真实互动。
 
-- **Name**: [name]
-- **Preferred name**: [preferred_name]
-- **Timezone**: [timezone]
+- **姓名**: [name]
+- **常用称呼**: [preferred_name]
+- **时区**: [timezone]
 
-## Current Understanding
+## 当前理解
 
-- What the user tends to care about.
-- How the user prefers to communicate.
-- Which kinds of answers the user usually finds helpful.
-- What kind of feedback tends to land well or badly.
+- 用户通常在意什么。
+- 用户更喜欢怎么沟通。
+- 哪些类型的回答对用户更有帮助。
+- 哪类反馈更容易让用户接受，哪类更容易让用户不舒服。
 
-## Guidance
+## 说明
 
-- Keep observations concrete and revisable.
-- Avoid turning this into a static label sheet.
-- Update it when interaction proves the understanding wrong or incomplete.
+- 观察要具体，也要可修正。
+- 不要把这里写成静态标签表。
+- 互动证明理解有误或不完整时，就更新这里。
 
-## Relationship to Other Files
+## 和其他文件的关系
 
-- `SOUL.md` describes the assistant's current voice.
-- `META.md` checks the assistant's reasoning.
-- `MEMORY.md` stores durable lessons that apply across sessions.
+- `SOUL.md` 描述助手当前语气。
+- `META.md` 检查助手推理。
+- `MEMORY.md` 存放跨会话都有效的长期经验。
