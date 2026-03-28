@@ -35,6 +35,16 @@ npm run dev
 npx -y @surlymochan/codexclaw bootstrap --service
 ```
 
+## 一行部署
+
+如果你只想先把本地环境和引导文件准备好，可以运行：
+
+```bash
+npx -y @surlymochan/codexclaw bootstrap
+```
+
+如果你想连常驻服务一起安装，就加上 `--service`。
+
 ## 常驻运行
 
 常驻运行可使用 macOS `launchd`：

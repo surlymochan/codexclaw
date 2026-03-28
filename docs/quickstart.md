@@ -15,3 +15,5 @@
 ```bash
 npx -y @surlymochan/codexclaw bootstrap --service
 ```
+
+如果你只想先准备本地环境，不安装常驻服务，可以把 `--service` 去掉。
