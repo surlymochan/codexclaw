@@ -1,0 +1,33 @@
+{
+  "name": "codexclaw",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Feishu WebSocket channel gateway for local Codex CLI sessions",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx watch src/index.ts",
+    "init:local-guidance": "tsx scripts/init-local-guidance.ts",
+    "service:install": "bash scripts/launchd/install.sh",
+    "service:restart": "bash scripts/launchd/restart.sh",
+    "service:uninstall": "bash scripts/launchd/uninstall.sh",
+    "start": "node dist/src/index.js",
+    "selfcheck": "tsx src/scripts/selfcheck.ts",
+    "test": "node --test --import tsx tests/**/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "^1.60.0",
+    "dotenv": "^17.2.3",
+    "node-cron": "^4.2.1",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "tsx": "^4.20.5",
+    "typescript": "^6.0.2"
+  }
+}

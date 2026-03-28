@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.data/
+.env
+/.tmp-appserver/
+/HANDOFF.md
+/SOUL.md
+/META.md
+/IDENTITY.md
+/USER.md
+/MEMORY.md
+/STORY.md
+/AGENTS.md
+/HEARTBEAT.md
+/CRON.md
+/daily-memory/
+npm-debug.log*
