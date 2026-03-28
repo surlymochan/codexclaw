@@ -50,6 +50,7 @@ setup notes are in [docs/local-guidance.md](docs/local-guidance.md).
 - [docs/quickstart.md](docs/quickstart.md)
 - [docs/local-guidance.md](docs/local-guidance.md)
 - [docs/open-source.md](docs/open-source.md)
+- [CHANGELOG.md](CHANGELOG.md)
 - [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Commands
