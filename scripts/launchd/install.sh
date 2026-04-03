@@ -5,8 +5,9 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 LABEL="com.chenchao.codexclaw"
 PLIST_DIR="$HOME/Library/LaunchAgents"
 PLIST_PATH="$PLIST_DIR/$LABEL.plist"
-LOG_DIR="$HOME/Library/Logs/codexclaw"
-RUNNER_SCRIPT="$ROOT_DIR/scripts/launchd/codexclaw-launchd.sh"
+LOG_DIR="$ROOT_DIR/runtime/logs/launchd"
+WRAPPER_DIR="$HOME/Library/Application Support/CodexClaw"
+WRAPPER_PATH="$WRAPPER_DIR/launchd-wrapper.sh"
 
 xml_escape() {
   local value="$1"
@@ -17,13 +18,28 @@ xml_escape() {
 }
 
 mkdir -p "$PLIST_DIR" "$LOG_DIR"
-chmod +x "$RUNNER_SCRIPT"
+mkdir -p "$WRAPPER_DIR"
 
 npm run selfcheck
 npm run build
 
+cat > "$WRAPPER_PATH" <<EOF
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(xml_escape "$ROOT_DIR")"
+
+if [[ ! -f dist/src/index.js ]]; then
+  npm run build
+fi
+
+exec npm run start
+EOF
+
+chmod +x "$WRAPPER_PATH"
+
 PATH_XML="$(xml_escape "$PATH")"
-RUNNER_XML="$(xml_escape "$RUNNER_SCRIPT")"
+WRAPPER_XML="$(xml_escape "$WRAPPER_PATH")"
 OUT_LOG_XML="$(xml_escape "$LOG_DIR/codexclaw.out.log")"
 ERR_LOG_XML="$(xml_escape "$LOG_DIR/codexclaw.err.log")"
 
@@ -36,7 +52,7 @@ cat > "$PLIST_PATH" <<EOF
   <string>$LABEL</string>
   <key>ProgramArguments</key>
   <array>
-    <string>$RUNNER_XML</string>
+    <string>$WRAPPER_XML</string>
   </array>
   <key>RunAtLoad</key>
   <true/>
