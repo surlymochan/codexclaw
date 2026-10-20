@@ -1,8 +1,26 @@
 {
   "name": "@surlymochan/codexclaw",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "description": "Feishu WebSocket channel gateway for local Codex CLI sessions",
+  "homepage": "https://github.com/surlymochan/codexclaw#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surlymochan/codexclaw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/surlymochan/codexclaw/issues"
+  },
+  "keywords": [
+    "codex",
+    "feishu",
+    "lark",
+    "ai-agents",
+    "chatbot",
+    "gateway",
+    "cli",
+    "automation"
+  ],
   "bin": {
     "codexclaw": "./dist/src/cli.js"
   },
@@ -28,6 +46,7 @@
     "dist",
     "docs/templates",
     "README.md",
+    "README.en.md",
     "CHANGELOG.md",
     "CONTRIBUTING.md",
     "LICENSE",
