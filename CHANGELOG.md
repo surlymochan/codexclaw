@@ -2,6 +2,13 @@
 
 CodexClaw 的重要变更都记录在这里。
 
+## v0.1.2
+
+### 修正
+
+- npm 包补齐 `repository` / `homepage` / `bugs` / `keywords` 元数据，npm 页面现在可以回链到 GitHub 仓库。
+- 新增英文版 README（`README.en.md`），并随包发布。
+
 ## v0.1.1
 
 Markdown 卡片切换到飞书 JSON 2.0 结构，正文直接交给官方 `markdown`

@@ -1,5 +1,7 @@
 # CodexClaw
 
+> [English](README.en.md) | 中文
+
 CodexClaw 是一个面向飞书的本地 Codex 助手网关。
 
 它把飞书会话连接到本地 `codex` CLI 线程，并把对话、记忆和后台任务都保存在本地。
